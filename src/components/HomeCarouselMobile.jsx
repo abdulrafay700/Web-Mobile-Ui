@@ -1,62 +1,65 @@
 import cellPhone from "../../src/Images/mobile.png";
-import cellPhone2 from "../../src/Images/mobile2.png";
+import cellPhone2 from "../../src/Images/mobile3.png";
 
-// import Carousel from 'react-bootstrap/Carousel';
-// import 'bootstrap/dist/css/bootstrap.min.css'; // Make sure Bootstrap CSS is imported
-
-// function HomeMobileCarousel() {
-//   return (
-//     <Carousel controls={true} indicators={true}> {/* Controls and indicators enabled */}
-//       <Carousel.Item>
-//         <div className="right-mble-container">
-//           <img className="img-fluid" src={cellPhone} alt="Mobile" />
-//         </div>
-//       </Carousel.Item>
-
-//       <Carousel.Item>
-//         <div className="right-mble-container">
-//           <img  className="img-fluid" src={cellPhone2} alt="Mobile" />
-//         </div>
-//       </Carousel.Item>
-//     </Carousel>
-//   );
-// }
-
-// export default HomeMobileCarousel;
-
-
-
-
-
-import React from "react";
+// import React from "react";
+// import Slider from "react-slick";
 import Slider from "react-slick";
+// Make sure you import the slick-carousel CSS files
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 
 function HomeMobileCarousel() {
   var settings = {
     dots: true,
-    infinite: true,
+    infinite: true ,
     speed: 500,
-    slidesToShow: 0,
-    slidesToScroll: 0,
-  };
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    autoplay: true,
+    vertical: true,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 0
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 0
+        }
+      }
+    ]
+};
   return (
-    <Slider {...settings}>
-        
-        <div className="right-mble-container">
-          <img className="img-fluid" src={cellPhone} alt="Mobile" />
-      </div>
-
-      <div className="right-mble-container">
-         <img className="img-fluid" src={cellPhone2} alt="Mobile" />
-       </div>
-            
-    </Slider>
+    <div className="slider-container ">
+      <Slider {...settings}>
+      <img  className="img-fluid" src={cellPhone2} alt="Mobile" />
+      <img  className="img-fluid" src={cellPhone} alt="Mobile" />
+      <img  className="img-fluid" src={cellPhone2} alt="Mobile" />
+      <img  className="img-fluid" src={cellPhone} alt="Mobile" />
+   
+     
+      </Slider>
+    </div>
   );
 }
 export default HomeMobileCarousel;
-
-
-
-{/* <div className="right-mble-container">
-<img src={cellPhone} alt="" />
-</div> */}
