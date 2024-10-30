@@ -9,7 +9,7 @@ function IphoneCardCarousel() {
         infinite: true,  // Ensure the carousel loops infinitely
         speed: 500,
         slidesToShow: 4,  // Show 3 items at once for desktop
-        slidesToScroll: 0,  // Scroll 1 item at a time for a smooth effect
+        slidesToScroll: 1,  // Scroll 1 item at a time for a smooth effect
         autoplay: true,
         autoplaySpeed: 1500,  // Speed for the autoplay
         cssEase: "linear",  // Smooth linear scrolling
