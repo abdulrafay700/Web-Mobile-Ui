@@ -175,7 +175,7 @@ function Header() {
         <div className="hero-container  px-5  mx-5  mt-5 pt-3 ">
                             
                 <div className="row">
-                    <div className="col-md-6 col-12">
+                    <div className="col-xl-6 col-12">
                         <h3>Largest <span className='main-text-color'>Wholesalers</span> </h3>
                         <h3>of <span className='main-text-color'>Mobile Phones</span></h3>
 
@@ -194,13 +194,15 @@ function Header() {
                        
 
                             {/* social icons list */}
-                            <div className="d-flex gap-2 mt-4">
-                                <div className="social-icon"><span><RiInstagramFill /></span></div>
-                                <div className="social-icon"><span><SiFacebook  /></span></div>
-                                <div className="social-icon"><span><IoLogoLinkedin/></span></div>
-                                <div className="social-icon"><span><RiInstagramFill /></span></div>
-                                <div className="social-icon"><span><RiInstagramFill /></span></div>
-                                <div className="social-icon"><span><FaTwitter /></span></div>
+                            <div className="d-flex gap-2 mt-4 social-icons-follow ">
+                                <div className="d-flex  gap-2  ">
+                                    <div className="social-icon"><span><RiInstagramFill /></span></div>
+                                    <div className="social-icon"><span><SiFacebook  /></span></div>
+                                    <div className="social-icon"><span><IoLogoLinkedin/></span></div>
+                                    <div className="social-icon"><span><RiInstagramFill /></span></div>
+                                    <div className="social-icon"><span><RiInstagramFill /></span></div>
+                                    <div className="social-icon"><span><FaTwitter /></span></div>
+                                </div>
                                     {/* people follow */}
                                     <div className="social-followers">
                                         <span className='follow-icon'><MdGroup/></span>
@@ -209,7 +211,7 @@ function Header() {
                             </div>
                     </div>
 
-                    <div className="col-md-6 col-12 d-flex flex-column align-items-center col-right-mobile">
+                    <div className="col-xl-6 col-12 d-flex flex-column align-items-center col-right-mobile">
                         {/* mobile carousel */}
                             < Slider/>
                     </div>

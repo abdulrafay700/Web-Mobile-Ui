@@ -577,3 +577,40 @@ font-size: 16px;
 
 }
 
+/* large device */
+@media only screen and (max-width: 1200px) {
+  .hero-section {
+    height: auto;
+
+  }
+
+  .hero-section::before {
+            content: "";
+            background-color: var(--main-color-lite);
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+            position: absolute;
+            border-radius: 35px 35px 0 0;
+            top: -60px;
+        
+  }
+  .form-container {
+    flex-direction: column;
+  }
+
+  .subscribe-btn , .stock-btn{
+    width: 250px;
+  }
+
+  .social-icons-follow{
+    flex-direction: column;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+  }
+  .follow-icon {
+    margin: 0;
+  }
+
+}
